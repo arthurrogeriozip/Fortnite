@@ -1,5 +1,5 @@
 <div align="center">
-<img src="project/public/assets/imagens/fortnite.png" width="350rem">
+<img src="public/assets/imagens/fortnite.png" width="350rem">
 </div>
 
 <br>
@@ -34,11 +34,11 @@ Texto Aqui
 
 ### Para a configuração do banco de dados:
 
-- Execute todo esse <a href="project/src/database/one-piece-quiz-script.sql">script</a> para a configuração do banco de dados.
+- Execute todo esse <a href="src/database/script-tabelas.sql">script</a> para a configuração do banco de dados.
 
 ### Instale as dependências do projeto:
 ```bash
-npm i
+npm install
 ```
 
 ### Após a instalação de todas as dependências:
