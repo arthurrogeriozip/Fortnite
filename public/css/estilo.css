@@ -1,29 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: black;
 }
 
 :root {
   --tamanho-header: 80px;
-  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-banner: calc(
+    100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px
+  );
+  --tamanho-simulador: calc(
+    100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px
+  );
+  --tamanho-login: calc(
+    100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px
+  );
   --tamanho-footer: 65px;
 }
 
 .container {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 80%;
   margin: auto;
 }
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
+  background-color: #101014;
+  position: fixed;
 }
 
 .header .container {
@@ -32,9 +39,49 @@ body {
   height: 100%;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.entrar {
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  border-radius: 6px;
+  border: 0;
+  color: #ffff;
+  background-color: #343437;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cadastrar {
+  align-items: center;
+  width: 90px;
+  height: 30px;
+  border-radius: 6px;
+  border: 0;
+  color: #18181c;
+  background-color: #edf519;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.globo {
+  width: 12%;
+  margin-bottom: -4%;
+}
+
+.header .container .fortnite {
+  width: 10%;
+}
+
 .header a {
   text-decoration: none;
-  color: #e3b062;
+  color: #ffff;
 }
 
 .agora {
@@ -47,17 +94,7 @@ body {
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  color: #e3b062;
-}
-
-.titulo {
-  color: #32b9cd;
-  width: fit-content;
-  font-weight: 500;
-}
-
-.header h1 {
-  margin: 0;
+  color: white;
 }
 
 /* BANNER */
@@ -65,7 +102,7 @@ body {
 .banner {
   height: var(--tamanho-banner);
   color: white;
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url("../assets/imgs/bg-jelly-fish-para-home.png");
   background-size: cover;
 }
 
@@ -119,29 +156,154 @@ body {
 }
 
 /* FOOTER */
-
 .footer {
-  background-color: #32b9cd;
-  height: 150px;
-  color: #fff;
+  background-color: #18181c;
+  color: #c4c4c4;
+  font-size: 1rem;
   display: flex;
-  font-size: 15px;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 0 0;
 }
 
-.footer .container {
+/* CONTEÚDO PRINCIPAL */
+.footer-content {
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* LOGO */
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* COLUNAS */
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #3a3a3a;
+  border-bottom: 1px solid #3a3a3a;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.column h3 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 5px;
+}
+
+.column img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.column .email {
+  width: 20px;
+  height: 14px;
+}
+
+.column a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.column a:hover {
+  color: #cccccc;
+}
+
+/* CLASSIFICAÇÃO ETÁRIA */
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: left;
+  background-color: #242428;
+  border-radius: 10px;
+  border: #3a3a3a solid 1px;
+}
+
+.rating-img {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.footer .container .version {
-  font-size: 12px;
+.rating img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+.rating p {
+  font-size: 0.75rem;
+  color: #c4c4c4;
+}
+
+.rating-low {
+  border-top: 1px solid #3a3a3a;
+  margin-right: 10px;
+}
+
+.rating-up {
+  margin-right: 10px;
+}
+
+.rating-low p {
+margin-top: 5px;
+}
+
+.rating-up p{
+  margin-bottom: 5px;
+}
+
+/* COPYRIGHT */
+
+.copyright {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  width: 90%;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 1%;
+  padding-left: 2%;
+  padding-bottom: 1%;
+  background-color: #18181c;
+  color: #ffff;
 }
 
 /* LOGIN */
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url("../assets/imgs/bg-jelly-fish-para-home.png");
   background-size: cover;
 }
 
@@ -214,7 +376,7 @@ body {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
-  background-color: #ED145B;
+  background-color: #ed145b;
   width: 120px;
   height: 30px;
   align-self: center;
@@ -232,12 +394,12 @@ body {
 }
 
 #div_erros_login {
-  display: none
+  display: none;
 }
 
 /* FORMULARIO */
 
-.alerta_erro{
+.alerta_erro {
   display: flex;
   justify-content: flex-end;
 }
@@ -249,12 +411,12 @@ body {
   width: 230px;
   position: fixed;
   border-radius: 4px;
-  border: #ED145B 3px solid;
+  border: #ed145b 3px solid;
   padding: 10px;
   margin-right: 10%;
 }
 
-.card_erro #mensagem_erro{
+.card_erro #mensagem_erro {
   font-weight: 500;
   font-size: 20px;
 }
@@ -285,7 +447,7 @@ input {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #ED145B;
+  background-color: #ed145b;
   width: 120px;
   align-self: center;
   margin-top: 5px;
@@ -310,7 +472,7 @@ input {
 
 .simulador .container {
   flex-direction: column;
-  overflow: scroll; 
+  overflow: scroll;
   height: var(--tamanho-simulador);
 }
 
@@ -348,15 +510,25 @@ input {
   height: 48px;
   animation-name: bell;
   animation-duration: 4s;
-  background-image: url('https://cdn-icons-png.flaticon.com/512/1157/1157000.png');
+  background-image: url("https://cdn-icons-png.flaticon.com/512/1157/1157000.png");
   background-size: cover;
   animation-iteration-count: infinite;
 }
 
 @keyframes bell {
-  0%   {transform: rotate(25deg)}
-  25%  {transform: rotate(-25deg)}
-  50%  {transform: rotate(25deg)}
-  75%  {transform: rotate(-25deg)}
-  100% {transform: rotate(25deg)}
+  0% {
+    transform: rotate(25deg);
+  }
+  25% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
 }
