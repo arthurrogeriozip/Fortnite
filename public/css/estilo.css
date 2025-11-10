@@ -166,19 +166,18 @@ body {
   padding: 40px 0 0 0;
 }
 
-/* CONTEÚDO PRINCIPAL */
+
 .footer-content {
   width: 90%;
-  max-width: 1200px;
 }
 
-/* LOGO */
+
 .footer-logo img {
   width: 120px;
   margin-bottom: 20px;
 }
 
-/* COLUNAS */
+
 .footer-columns {
   display: flex;
   justify-content: space-between;
@@ -293,7 +292,6 @@ margin-top: 5px;
   font-size: 1rem;
   font-weight: bold;
   padding-top: 1%;
-  padding-left: 2%;
   padding-bottom: 1%;
   background-color: #18181c;
   color: #ffff;
