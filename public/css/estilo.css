@@ -48,9 +48,10 @@ body {
 
 .entrar {
   align-items: center;
-  width: 70px;
+  width: 90px;
   height: 30px;
   border-radius: 6px;
+  font-size: 1.1rem;
   border: 0;
   color: #ffff;
   background-color: #343437;
@@ -60,19 +61,15 @@ body {
 
 .cadastrar {
   align-items: center;
-  width: 90px;
+  width: 120px;
   height: 30px;
   border-radius: 6px;
+  font-size: 1.1rem;
   border: 0;
   color: #18181c;
   background-color: #edf519;
   font-weight: bold;
   cursor: pointer;
-}
-
-.globo {
-  width: 12%;
-  margin-bottom: -4%;
 }
 
 .header .container .fortnite {
@@ -89,7 +86,7 @@ body {
 }
 
 .navbar {
-  width: 300px;
+  width: 25%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,27 +97,30 @@ body {
 /* BANNER */
 
 .banner {
-  height: var(--tamanho-banner);
+  height: 1000px;
   color: white;
-  background-image: url("../assets/imgs/bg-jelly-fish-para-home.png");
-  background-size: cover;
+  background-image: url("../assets/imagens/fortnite_battle.jpg");
+  background-size: 100%;
 }
 
 .banner .container {
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding-top: 9%;
 }
 
-.banner .container p {
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  font-size: 36px;
-}
 
-.banner .container span {
-  font-weight: 800;
+.banner .container button {
+  background-color: #edf519;
+  border-radius: 10px;
+  border: 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  height: 80px;
+  width: 280px;
+  position: center;
+  cursor: pointer;
 }
 
 /* MISSÃO VISÃO VALORES */
@@ -529,4 +529,22 @@ input {
   100% {
     transform: rotate(25deg);
   }
+}
+
+
+/* COMPETITIVO */
+
+/* BANNER */
+
+.fncs {
+  height: 800px;
+  color: white;
+  background-image: url("../assets/imagens/FNCS.png");
+  background-size: 100%;
+}   
+
+.fncs .container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
