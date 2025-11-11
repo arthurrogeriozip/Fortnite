@@ -554,14 +554,19 @@ input {
 
 .jogadores-profissionais {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .jogadores-profissionais .linha {
+.linha {
   display: flex;
-  align-items: space-between;
-  justify-content: center;
-} */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1480px;
+  padding: 1%;
+}
 
 .card {
   display: flex;
@@ -572,7 +577,13 @@ input {
   align-items: center;
   padding-left: 2%;
   border-radius: 16px;
-  width: 470px;
+  width: 400px;
+  height: 140px;
+}
+
+.card img {
+  width: 140px;
+  height: 140px;
 }
 
 .card .jogador {
@@ -584,8 +595,20 @@ border-radius: 16px;
 display: flex;
 flex-direction: column;
 align-items: start;
-justify-content: space-around;
+justify-content: space-between;
 padding-left: 5%;
+}
+
+.card .nome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .nome .bandeira {
+width: 35px;
+height: auto;
+padding-left: 80%;
 }
 
 .card .conteudo .nome {
