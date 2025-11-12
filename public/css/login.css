@@ -2,6 +2,11 @@
 
 /* Login */
 
+.login .container {
+  padding-top: 8%;
+  padding-bottom: 10%;
+}
+
 .login {
   height: var(--tamanho-login);
   background-image: url("../assets/imgs/bg-jelly-fish-para-home.png");
@@ -14,22 +19,34 @@
   height: 100%;
 }
 
+.card-login {
+width: 592px;
+}
+
 .card {
   width: 50%;
-  background-color: #e5e5e5;
-  border-radius: 10px;
+  background-color: #242428;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: palevioletred;
+  color: #808080;
   flex-direction: column;
-  height: fit-content;
   padding: 20px 0;
 }
 
+.card .imagem img {
+  width: 300px;
+  height: auto;
+  padding-top: 15%;
+}
+
 .card h2 {
+  color: #BEBEBE;
   margin: 0;
-  font-size: 30px;
+  font-size: 1.5rem;
+  padding-top: 8%;
+  padding-bottom: 4%;
 }
 
 .formulario {
@@ -38,6 +55,7 @@
   width: 80%;
   justify-content: space-around;
   flex-direction: column;
+  padding-bottom: 8%;
 }
 
 .formulario span {
@@ -46,15 +64,19 @@
 }
 
 .formulario input {
-  border: 2px solid #32b9cd;
-  text-align: center;
+  border: 1px solid #808080;
+  color: #808080;
+  background-color: #242428;
+  text-align: start;
+  padding-left: 5%;
+  height: 30px;
   border-radius: 10px;
   margin: 0;
 }
 
 .formulario select {
-  border: 2px solid #32b9cd;
-  background-color: white;
+  border: 1px solid #2194F2;
+  background-color: #242428;
   color: gray;
   height: 36px;
   text-align: center;
@@ -71,17 +93,41 @@
 
 .botao {
   cursor: pointer;
-  font-family: "Barlow", sans-serif;
   border: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 18px;
   color: #fff;
-  background-color: #ed145b;
-  width: 120px;
-  height: 30px;
+  background-color: #2194F2;
+  width: 592px;
+  height: 52px;
   align-self: center;
   margin-top: 20px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #808080;
+  margin: 30px 0;
+}
+.contas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+
+.contas a {
+  cursor: pointer;
+}
+
+.contas img {
+  width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .loading-div {

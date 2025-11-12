@@ -41,7 +41,7 @@ body {
   border: 0;
   color: #ffff;
   background-color: #343437;
-  font-weight: bold;
+  font-weight: normal;
   cursor: pointer;
 }
 
@@ -54,7 +54,7 @@ body {
   border: 0;
   color: #18181c;
   background-color: #edf519;
-  font-weight: bold;
+  font-weight: normal;
   cursor: pointer;
 }
 
