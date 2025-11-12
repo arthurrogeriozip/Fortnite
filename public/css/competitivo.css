@@ -1,0 +1,138 @@
+@import url(root.css);
+
+/* Competitivo */
+
+/* Banner */
+
+.fncs {
+  height: 800px;
+  color: white;
+  background-image: url("../assets/imagens/FNCS.png");
+  background-position: center;
+  background-size: 100%;
+}   
+
+.fncs .container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Informação */
+.informacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 10%;
+}
+
+.informacao .texto {
+  width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.informacao .texto span {
+ font-weight: bold;
+}
+
+.informacao .texto h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.informacao .imagem-informacao img {
+  width: 600px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Card Jogador */
+
+.jogadores-profissionais {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-pro {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 1480px;
+  padding-left: 10%;
+}
+
+.titulo-pro h2 {
+  font-size: 2rem;
+}
+
+.linha {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1480px;
+  padding: 1%;
+}
+
+.card {
+  display: flex;
+  background-color: #18181C;
+  color: #fff;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding-left: 1.4%;
+  border-radius: 16px;
+  width: 400px;
+  height: 180px;
+}
+
+.card img {
+  width: 140px;
+  height: 140px;
+}
+
+.card .jogador {
+background-color: #3a3a3a;
+border-radius: 16px;
+}
+
+.card .conteudo {
+display: flex;
+flex-direction: column;
+align-items: start;
+justify-content: space-between;
+padding-left: 5%;
+}
+
+.card .nome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.card .nome p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card .nome .bandeira {
+width: 28px;
+height: auto;
+padding-left: 0;
+margin-left: 8px;
+}
+
+.card .conteudo .team {
+  color: #c4c4c4;
+}
+
+.card .conteudo .earnings {
+  color: #19F5F5;
+}
