@@ -603,17 +603,20 @@ padding-left: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
+}
+
+.card .nome p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .card .nome .bandeira {
-width: 35px;
+width: 28px;
 height: auto;
-padding-left: 80%;
-}
-
-.card .conteudo .nome {
- font-size: 1.5rem;
- font-weight: bold;
+padding-left: 0;
+margin-left: 8px;
 }
 
 .card .conteudo .team {
