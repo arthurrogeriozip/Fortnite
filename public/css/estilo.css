@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: black;
+  background-color: white;
 }
 
 :root {
@@ -550,6 +550,36 @@ input {
   height: 100%;
 }
 
+/* Informação */
+.informacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 10%;
+}
+
+.informacao .texto {
+  width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.informacao .texto span {
+ font-weight: bold;
+}
+
+.informacao .texto h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.informacao .imagem-informacao img {
+  width: 600px;
+  height: auto;
+  border-radius: 16px;
+}
+
 /* Card Jogador */
 
 .jogadores-profissionais {
@@ -557,6 +587,18 @@ input {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.titulo-pro {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 1480px;
+  padding-left: 10%;
+}
+
+.titulo-pro h2 {
+  font-size: 2rem;
 }
 
 .linha {
@@ -575,7 +617,7 @@ input {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  padding-left: 2%;
+  padding-left: 1.4%;
   border-radius: 16px;
   width: 400px;
   height: 140px;
