@@ -2,165 +2,164 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Fortnite | Login</title>
+  <title>Fortnite | Login</title>
 
-    <script src="./js/sessao.js"></script>
+  <script src="./js/sessao.js"></script>
 
-    <link rel="stylesheet" href="./css/login.css">
-    <link rel="icon" href="./assets/icon/Fortnite_logo.png">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="icon" href="./assets/icon/Fortnite_logo.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
 <body>
 
-    <!--Header-->
+  <!--Header-->
 
-     <div class="header">
-      <div class="container">
-        <img
-          class="fortnite"
-          src="./assets/imagens/fortnite.png"
-          alt="Fortnite"
-        />
-        <ul class="navbar">
-          <li>
-            <a href="index.html">Início</a>
-          </li>
-          <li>
-            <a href="competitivo.html">Competitivo</a>
-          </li>
-          <li>
-            <a href="parcerias.html">Parcerias</a>
-          </li>
-          <li>
-            <a href="index.html#">Sobre mim</a>
-          </li>
-        </ul>
-        <div class="butonns">
-          <a href="#"><button class="entrar">Entrar</button></a>
-          <a href="cadastro.html"><button class="cadastrar">Cadastre-se</button></a>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
-        <div class="container">
-            <div class="card card-login">
-              <div class="card imagem">
-                <img src="./assets/imagens/fortnite.png" alt="Fortnite">
-              </div>
-                <h2>Login</h2>
-                <div class="formulario">
-                    <div class="campo">
-                        <input id="email_input" type="text" placeholder="Endereço de e-mail">
-                    </div>
-                    <div class="campo">
-                        <input id="senha_input" type="password" placeholder="Senha">
-                    </div>
-                    <button class="botao" onclick="entrar()">Continuar</button>
-                    <hr>
-                    <div class="contas">
-                      <a>
-                        <img src="./assets/imagens/google.png" alt="Google">
-                      </a>
-                      <a>
-                        <img src="./assets/imagens/facebook.jpeg" alt="Facebook">
-                      </a>
-                      <a>
-                        <img src="./assets/imagens/apple.jpeg" alt="Apple">
-                      </a>
-                      <a>
-                        <img src="./assets/imagens/microsoft.jpeg" alt="Microsoft">
-                      </a>
-                    </div>
-                </div>
-
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/bolinha.webp" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login"></div>
-            </div>
-        </div>
-    </div>
-
-    <!--footer inicio-->
-    <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-logo">
-      <img src="./assets/imagens/fortnite.png" alt="Fortnite Logo">
-    </div>
-    <div class="footer-columns">
-      <div class="column">
-        <h3>Principal</h3>
-        <ul>
-          <li>
-            <a href="index.html">Início</a>
-          </li>
-          <li>
-            <a href="competitivo.html">Competitivo</a>
-          </li>
-          <li>
-            <a href="parcerias.html">Parcerias</a>
-          </li>
-          <li>
-            <a href="#">Sobre mim</a>
-          </li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Contato</h3>
-        <ul>
-          <li>
-            <img class="email" src="./assets/imagens/email.png" alt="E-mail"><span>arthur.mendonca@sptech.school</span>
-          </li>
-          <li>
-            <img src="./assets/imagens/telefone.svg" alt="Telefone"><span>(22) 99611-0102</span>
-          </li>
-          <li>
-            <img src="./assets/imagens/whatsapp.svg" alt="WhatsApp"><span>(22) 99611-0102</span>
-          </li>
-        </ul>
-      </div>
-      <div class="column">
-        <h3>Redes sociais</h3>
-        <ul>
-          <li>
-            <img src="./assets/imagens/github.svg" alt="GitHub"><span>arthurrogeriozip</span>
-          </li>
-          <li>
-            <img src="./assets/imagens/instagram.svg" alt="Instagram"><span>@arth_mend</span>
-          </li>
-          <li>
-            <img src="./assets/imagens/linkedin.svg" alt="LinkedIn"><span>Arthur Rogério</span>
-          </li>
-        </ul>
-      </div>
-      <div class="rating">
-        <div class="rating-img">
-          <img src="./assets/imagens/classificacao-12.svg" alt="Classificação 12 anos">
-        </div>
-        <div class="rating-content">
-          <div class="rating-up">
-            <p>Violência / Linguajar inapropriado </p>
-          </div>
-          <div class="rating-low">
-            <p>Compras On-line / Interação com usuários</p>
-          </div>
-        </div>
+  <div class="header">
+    <div class="container">
+      <img class="fortnite" src="./assets/imagens/fortnite.png" alt="Fortnite" />
+      <ul class="navbar">
+        <li>
+          <a href="index.html">Início</a>
+        </li>
+        <li>
+          <a href="competitivo.html">Competitivo</a>
+        </li>
+        <li>
+          <a href="parcerias.html">Parcerias</a>
+        </li>
+        <li>
+          <a href="index.html#">Sobre mim</a>
+        </li>
+      </ul>
+      <div class="butonns">
+        <a href="#"><button class="entrar">Entrar</button></a>
+        <a href="cadastro.html"><button class="cadastrar">Cadastre-se</button></a>
       </div>
     </div>
   </div>
+
+  <div class="jonesy">
+    <img src="assets/imagens/jonesy.png" alt="Jonesy">
+  </div>
+  <div class="login">
+    <div class="alerta_erro">
+      <div class="card_erro" id="cardErro">
+        <span id="mensagem_erro"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card card-login">
+        <div class="card imagem">
+          <img src="./assets/imagens/fortnite.png" alt="Fortnite">
+        </div>
+        <h2>Login</h2>
+        <div class="formulario">
+          <div class="campo">
+            <input id="email_input" type="text" placeholder="Endereço de e-mail">
+          </div>
+          <div class="campo">
+            <input id="senha_input" type="password" placeholder="Senha">
+          </div>
+          <button class="botao" onclick="entrar()">Continuar</button>
+          <hr>
+          <div class="contas">
+            <a>
+              <img src="./assets/imagens/google.png" alt="Google">
+            </a>
+            <a>
+              <img src="./assets/imagens/facebook.jpeg" alt="Facebook">
+            </a>
+            <a>
+              <img src="./assets/imagens/apple.jpeg" alt="Apple">
+            </a>
+            <a>
+              <img src="./assets/imagens/microsoft.jpeg" alt="Microsoft">
+            </a>
+          </div>
+        </div>
+
+        <div id="div_aguardar" class="loading-div">
+          <img src="./assets/bolinha.webp" id="loading-gif">
+        </div>
+
+        <div id="div_erros_login"></div>
+      </div>
+    </div>
+  </div>
+
+  <!--footer inicio-->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="./assets/imagens/fortnite.png" alt="Fortnite Logo">
+      </div>
+      <div class="footer-columns">
+        <div class="column">
+          <h3>Principal</h3>
+          <ul>
+            <li>
+              <a href="index.html">Início</a>
+            </li>
+            <li>
+              <a href="competitivo.html">Competitivo</a>
+            </li>
+            <li>
+              <a href="parcerias.html">Parcerias</a>
+            </li>
+            <li>
+              <a href="#">Sobre mim</a>
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>Contato</h3>
+          <ul>
+            <li>
+              <img class="email" src="./assets/imagens/email.png"
+                alt="E-mail"><span>arthur.mendonca@sptech.school</span>
+            </li>
+            <li>
+              <img src="./assets/imagens/telefone.svg" alt="Telefone"><span>(22) 99611-0102</span>
+            </li>
+            <li>
+              <img src="./assets/imagens/whatsapp.svg" alt="WhatsApp"><span>(22) 99611-0102</span>
+            </li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>Redes sociais</h3>
+          <ul>
+            <li>
+              <img src="./assets/imagens/github.svg" alt="GitHub"><span>arthurrogeriozip</span>
+            </li>
+            <li>
+              <img src="./assets/imagens/instagram.svg" alt="Instagram"><span>@arth_mend</span>
+            </li>
+            <li>
+              <img src="./assets/imagens/linkedin.svg" alt="LinkedIn"><span>Arthur Rogério</span>
+            </li>
+          </ul>
+        </div>
+        <div class="rating">
+          <div class="rating-img">
+            <img src="./assets/imagens/classificacao-12.svg" alt="Classificação 12 anos">
+          </div>
+          <div class="rating-content">
+            <div class="rating-up">
+              <p>Violência / Linguajar inapropriado </p>
+            </div>
+            <div class="rating-low">
+              <p>Compras On-line / Interação com usuários</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="copyright">
       <span>&copy; 2025 - Arthur Rogério Carvalho Mendonça</span>
     </div>
@@ -173,73 +172,73 @@
 <script>
 
 
-    function entrar() {
-        aguardar();
+  function entrar() {
+    aguardar();
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
 
-        if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
-            return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
-
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
-
-        fetch("/usuarios/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar
-            })
-        }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
-
-            if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
-
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
-            } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                    finalizarAguardar(texto);
-                });
-            }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
-
-        return false;
+    if (emailVar == "" || senhaVar == "") {
+      cardErro.style.display = "block"
+      mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+      finalizarAguardar();
+      return false;
+    }
+    else {
+      setInterval(sumirMensagem, 5000)
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
+    console.log("FORM LOGIN: ", emailVar);
+    console.log("FORM SENHA: ", senhaVar);
+
+    fetch("/usuarios/autenticar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      })
+    }).then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!")
+
+      if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+          sessionStorage.EMAIL_USUARIO = json.email;
+          sessionStorage.NOME_USUARIO = json.nome;
+          sessionStorage.ID_USUARIO = json.id;
+          sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+          setTimeout(function () {
+            window.location = "./dashboard/cards.html";
+          }, 1000); // apenas para exibir o loading
+
+        });
+
+      } else {
+
+        console.log("Houve um erro ao tentar realizar o login!");
+
+        resposta.text().then(texto => {
+          console.error(texto);
+          finalizarAguardar(texto);
+        });
+      }
+
+    }).catch(function (erro) {
+      console.log(erro);
+    })
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none"
+  }
 
 </script>
