@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
   
 }
 
@@ -26,6 +27,11 @@
 
 .termos span {
   padding-left: 3%;
+}
+
+.termos a {
+  color: white;
+  cursor: pointer;
 }
 
 /* Login */
