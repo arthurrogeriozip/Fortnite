@@ -30,6 +30,7 @@
   width: 50%;
   font-size: 1.1rem;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .informacao .texto span {
@@ -38,12 +39,12 @@
 
 .informacao .texto h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   color: #111;
 }
 
 .informacao .imagem-informacao img {
-  width: 600px;
+  width: 550px;
   height: auto;
   border-radius: 16px;
 }

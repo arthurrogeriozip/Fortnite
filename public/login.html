@@ -42,7 +42,6 @@
       </div>
     </div>
   </div>
-
   <div class="jonesy">
     <img src="assets/imagens/jonesy.png" alt="Jonesy">
   </div>
@@ -68,6 +67,15 @@
           <button class="botao" onclick="entrar()">Continuar</button>
           <hr>
           <div class="contas">
+             <a>
+              <img src="./assets/imagens/xbox.png" alt="Xbox">
+            </a>
+            <a>
+              <img src="./assets/imagens/playstation.png" alt="PlayStation">
+            </a>
+             <a>
+              <img src="./assets/imagens/nintendo.png" alt="Nintendo">
+            </a>
             <a>
               <img src="./assets/imagens/google.png" alt="Google">
             </a>
@@ -180,7 +188,7 @@
 
     if (emailVar == "" || senhaVar == "") {
       cardErro.style.display = "block"
-      mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+      mensagem_erro.innerHTML = "Há campos em branco preencha corretamente!";
       finalizarAguardar();
       return false;
     }

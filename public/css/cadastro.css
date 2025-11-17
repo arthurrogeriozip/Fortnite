@@ -1,5 +1,33 @@
 @import url(root.css);
 
+/* Politica */
+
+.politica {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.politica a {
+  cursor: pointer;
+  padding-top: 4%;
+}
+
+/* Termos */
+
+.termos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  padding-top: 2%;
+}
+
+.termos span {
+  padding-left: 3%;
+}
+
 /* Login */
 
 .login .container {
@@ -9,8 +37,8 @@
 
 .login {
   height: var(--tamanho-login);
-  background-image: url("../assets/imgs/bg-jelly-fish-para-home.png");
   background-size: cover;
+  background-color: #2194F2;
 }
 
 .login .container {
@@ -103,6 +131,15 @@ width: 592px;
   height: 52px;
   align-self: center;
   margin-top: 20px;
+}
+
+.peixoto {
+  position: absolute;
+  top: 100px;
+  left: -5%;
+  width: 100px;
+  height: 100px;
+  padding-left: 73%;
 }
 
 hr {
