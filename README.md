@@ -22,6 +22,10 @@
 <div display="flex" flex-direction="column">
 <img src="public/assets/imagens/nodejs.png" width= 100px; height= auto;>
 <img src="public/assets/imagens/javascript.png" width= 100px; height= auto;>
+</div>
+
+### Banco de Dados:
+<div display="flex" flex-direction="column">
 <img src="public/assets/imagens/mysql.png" width= 100px; height= auto;>
 </div>
 </div>
