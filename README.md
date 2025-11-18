@@ -1,10 +1,10 @@
-<div align-itens="center">
+<div align="center">
 <img src="public/assets/imagens/fortnite.png" width="350rem">
 </div>
 
 <br>
 
-<p text-align="justify">Fortnite é um jogo muito legal porque sempre tem coisa nova pra fazer. Você cai numa ilha, pega armas e tenta sobreviver, tudo com um visual colorido e divertido. O jogo vive mudando, trazendo mapas diferentes, personagens famosos e eventos surpresa. Dá pra jogar com amigos, rir, explorar e aproveitar várias aventuras no mesmo lugar. É um jogo leve, animado e que prende a gente por ser sempre divertido.</p>
+<p text-align="justify";>Fortnite é um jogo muito legal porque sempre tem coisa nova pra fazer. Você cai numa ilha, pega armas e tenta sobreviver, tudo com um visual colorido e divertido. O jogo vive mudando, trazendo mapas diferentes, personagens famosos e eventos surpresa. Dá pra jogar com amigos, rir, explorar e aproveitar várias aventuras no mesmo lugar. É um jogo leve, animado e que prende a gente por ser sempre divertido.</p>
 
 <br>
 <div text-align="left">
