@@ -1,27 +1,25 @@
-<div align="center">
+<div text-align="center">
 <img src="public/assets/imagens/fortnite.png" width="350rem">
 </div>
 
 <br>
 
-Texto Aqui
+Fortnite é um jogo muito legal porque sempre tem coisa nova pra fazer. Você cai numa ilha, pega armas e tenta sobreviver, tudo com um visual colorido e divertido. O jogo vive mudando, trazendo mapas diferentes, personagens famosos e eventos surpresa. Dá pra jogar com amigos, rir, explorar e aproveitar várias aventuras no mesmo lugar. É um jogo leve, animado e que prende a gente por ser sempre divertido.
 
 <br>
+<div text-align="left">
 
 ## 🚀 Tecnologias utilizadas
 
 ### Front-end:
-
-<div align="left">
-
-![HTML](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML]
+![CSS]
+![JavaScript]
 
  ### Back-end:
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![NodeJS]
+![JavaScript]
+![MySQL]
 </div>
 
 <br>
@@ -29,8 +27,8 @@ Texto Aqui
 ## ⚙ Instalação local
 
 ### Requisitos para a instalação:
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![NodeJS]
+![MySQL]
 
 ### Para a configuração do banco de dados:
 
