@@ -34,12 +34,6 @@
 
 ## ⚙ Instalação local
 
-### Requisitos para a instalação:
-<div display="flex" flex-direction="column">
-<img src="public/assets/imagens/nodejs.png" width= 100px; height= auto;>
-<img src="public/assets/imagens/mysql.png" width= 100px; height= auto;>
-</div>
-
 ### Para a configuração do banco de dados:
 
 - Execute todo esse <a href="src/database/script-tabelas.sql">script</a> para a configuração do banco de dados.
