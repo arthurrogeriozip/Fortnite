@@ -1,10 +1,10 @@
-<div text-align="center">
+<div align-itens="center">
 <img src="public/assets/imagens/fortnite.png" width="350rem">
 </div>
 
 <br>
 
-Fortnite é um jogo muito legal porque sempre tem coisa nova pra fazer. Você cai numa ilha, pega armas e tenta sobreviver, tudo com um visual colorido e divertido. O jogo vive mudando, trazendo mapas diferentes, personagens famosos e eventos surpresa. Dá pra jogar com amigos, rir, explorar e aproveitar várias aventuras no mesmo lugar. É um jogo leve, animado e que prende a gente por ser sempre divertido.
+<p text-align="justify">Fortnite é um jogo muito legal porque sempre tem coisa nova pra fazer. Você cai numa ilha, pega armas e tenta sobreviver, tudo com um visual colorido e divertido. O jogo vive mudando, trazendo mapas diferentes, personagens famosos e eventos surpresa. Dá pra jogar com amigos, rir, explorar e aproveitar várias aventuras no mesmo lugar. É um jogo leve, animado e que prende a gente por ser sempre divertido.</p>
 
 <br>
 <div text-align="left">
@@ -12,14 +12,14 @@ Fortnite é um jogo muito legal porque sempre tem coisa nova pra fazer. Você ca
 ## 🚀 Tecnologias utilizadas
 
 ### Front-end:
-![HTML]
-![CSS]
-![JavaScript]
+<img src="public/assets/imagens/html.png">
+<img src="public/assets/imagens/css.png">
+<img src="public/assets/imagens/javascript.png">
 
  ### Back-end:
-![NodeJS]
-![JavaScript]
-![MySQL]
+<img src="public/assets/imagens/nodejs.png">
+<img src="public/assets/imagens/javascript.png">
+<img src="public/assets/imagens/mysql.png">
 </div>
 
 <br>
@@ -27,8 +27,8 @@ Fortnite é um jogo muito legal porque sempre tem coisa nova pra fazer. Você ca
 ## ⚙ Instalação local
 
 ### Requisitos para a instalação:
-![NodeJS]
-![MySQL]
+<img src="public/assets/imagens/nodejs.png">
+<img src="public/assets/imagens/mysql.png">
 
 ### Para a configuração do banco de dados:
 
