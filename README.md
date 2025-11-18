@@ -12,14 +12,18 @@
 ## 🚀 Tecnologias utilizadas
 
 ### Front-end:
-<img src="public/assets/imagens/html.png">
-<img src="public/assets/imagens/css.png">
-<img src="public/assets/imagens/javascript.png">
+<div display="flex" flex-direction="column">
+<img src="public/assets/imagens/html.png" width= 100px; height= auto;>
+<img src="public/assets/imagens/css.png" width= 100px; height= auto;>
+<img src="public/assets/imagens/javascript.png" width= 100px; height= auto;>
+</div>
 
  ### Back-end:
-<img src="public/assets/imagens/nodejs.png">
-<img src="public/assets/imagens/javascript.png">
-<img src="public/assets/imagens/mysql.png">
+<div display="flex" flex-direction="column">
+<img src="public/assets/imagens/nodejs.png" width= 100px; height= auto;>
+<img src="public/assets/imagens/javascript.png" width= 100px; height= auto;>
+<img src="public/assets/imagens/mysql.png" width= 100px; height= auto;>
+</div>
 </div>
 
 <br>
@@ -27,8 +31,10 @@
 ## ⚙ Instalação local
 
 ### Requisitos para a instalação:
-<img src="public/assets/imagens/nodejs.png">
-<img src="public/assets/imagens/mysql.png">
+<div display="flex" flex-direction="column">
+<img src="public/assets/imagens/nodejs.png" width= 100px; height= auto;>
+<img src="public/assets/imagens/mysql.png" width= 100px; height= auto;>
+</div>
 
 ### Para a configuração do banco de dados:
 
