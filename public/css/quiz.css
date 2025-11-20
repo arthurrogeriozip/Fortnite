@@ -20,6 +20,31 @@
     --new-white: #E8E8E8;
 }
 
+.quiz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    background-image: url("../assets/imagens/backgroundquiz.jpeg");
+    background-size: 100%;
+    height: 560px;
+    color: white;
+}
+
+.btnIniciarQuiz {
+    align-items: center;
+    width: 800px;
+    height: 300px;
+    border-radius: 16px;
+    font-size: 6rem;
+    font-weight: bold;
+    border: 0;
+    color: #18181c;
+    background-color: #edf519;
+    font-weight: normal;
+    cursor: pointer;
+}
+
 .flex-colunar {
     display: flex;
     flex-direction: column;
@@ -27,14 +52,6 @@
 
 .width-fit-content {
     width: fit-content;
-}
-
-.border-primary {
-    border: 3px solid var(--primary-brand-color);
-}
-
-.border-secondary {
-    border: 3px solid var(--secondary-brand-color);
 }
 
 .padding-8 {
@@ -62,4 +79,24 @@
 
 .text-new-gray {
     color: var(--new-gray);
+}
+
+#opcoes {
+display: flex;
+flex-direction: row;
+}
+
+#pontuacaoEJogo {
+display: flex;
+flex-direction: row;    
+justify-content: space-between;
+}
+
+.background {
+display: flex;
+background-color: #212427;
+border-radius: 6px;
+align-items: center;
+justify-content: center;
+width: 700px;
 }
