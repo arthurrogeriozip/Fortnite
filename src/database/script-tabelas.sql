@@ -9,18 +9,19 @@ CREATE TABLE usuario (
 	senha VARCHAR(50) NOT NULL
 );
 
-create table quiz (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	fk_usuario INT,
-	fk_personagem INT,
-	acertos INT,
-	tempo TIME,
-	CONSTRAINT fk_usuario FOREIGN KEY (fk_usuario) REFERENCES usuario(id),
-	CONSTRAINT fk_personagem FOREIGN KEY (fk_personagem) REFERENCES personagem(id),
+CREATE TABLE pontuacao (
+id INT PRIMARY KEY AUTO_INCREMENT,
+acertos INT,
+fk_usuario INT,
+CONSTRAINT fk_usuario_p FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
-CREATE TABLE personagem (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	cargo VARCHAR(50)
+CREATE TABLE errada (
+id INT PRIMARY KEY AUTO_INCREMENT,
+questao INT,
+fk_usuario INT,
+CONSTRAINT fk_usuario_e FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
+
+SELECT * FROM usuario;
+
