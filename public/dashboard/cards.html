@@ -10,6 +10,7 @@
 
 
     <link rel="stylesheet" href="./../css/dashboards.css">
+    <link rel="stylesheet" href="./../css/quiz.css">
     <link rel="icon" href="../assets/icon/Fortnite_logo.png">
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
@@ -21,21 +22,22 @@
     <div class="janela">
         <div class="header-left">
             <img src="../assets/imagens/fortnite.png" alt="Fortnite">
-            <div class="perfil">
-                <img src="" alt="Perfil">
-            </div>
+
             <div class="hello">
+                <div class="perfil">
+                    <img src="../assets/imagens/renegade.png" alt="Perfil">
+                </div>
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="#">
+            <div class="btn-nav">
+                <a href="dashboard.html">
                     <h3>Quiz</h3>
                 </a>
             </div>
 
-            <div class="btn-nav">
-                <a href="./cards.html">
+            <div class="btn-nav-white">
+                <a href="#">
                     <h3>Gráficos</h3>
                 </a>
 
@@ -43,7 +45,8 @@
             </div>
 
             <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3><img src="../assets/imagens/logout_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg" alt="Logout">
+                <h3>Sair</h3><img src="../assets/imagens/logout_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg"
+                    alt="Logout">
             </div>
 
         </div>
@@ -59,5 +62,5 @@
 </html>
 
 <script>
-b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 </script>

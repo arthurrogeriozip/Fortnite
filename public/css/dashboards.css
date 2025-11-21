@@ -352,7 +352,10 @@ canvas {
 .hello {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding-bottom:0;
 }
 
 .hello h3 {
@@ -413,5 +416,10 @@ canvas {
 
 img {
   width: 150px;
+  height: auto;
+}
+
+.perfil img {
+  width: 80px;
   height: auto;
 }
