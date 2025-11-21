@@ -28,3 +28,96 @@
   position: center;
   cursor: pointer;
 }
+
+.containercont {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  gap: 100px;
+}
+
+.lobby {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: justify;
+  gap: 100px;
+}
+
+.lobby img {
+  width: 600px;
+  height: auto;
+}
+
+.mapa {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: justify;
+  gap: 100px;
+}
+
+.mapa img {
+  width: 600px;
+  height: auto;
+}
+
+.modos {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  gap: 100px;
+}
+
+.modos span{
+  margin-top: -100px;
+}
+
+.jogos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.jogos img {
+  width: 200px;
+  height: auto;
+} 
+
+.mode {
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  transition: 0.3s;
+  width: 200px;
+}
+
+.mode:hover {
+  transform: scale(1.08);
+}
+
+.battlebus {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.battlebus img {
+  width: 600px;
+  height: auto;
+}
+
+.sobremim {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: justify;
+  gap: 80px;
+}
+.sobremim img {
+  width: 600px;
+  height: auto;
+}
