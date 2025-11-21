@@ -9,7 +9,7 @@
 <br>
 <div text-align="left">
 
-## 🚀 Tecnologias utilizadas
+## 🤖 Tecnologias utilizadas
 
 ### Front-end:
 <div display="flex" flex-direction="column">
@@ -32,7 +32,7 @@
 
 <br>
 
-## ⚙ Instalação local
+## ⬇️ Instalação local
 
 ### Para a configuração do banco de dados:
 
