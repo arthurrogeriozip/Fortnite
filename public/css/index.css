@@ -231,6 +231,7 @@
 .emote img {
   width: 600px;
   height: auto;
+  border-radius: 10px;
 }
 
 

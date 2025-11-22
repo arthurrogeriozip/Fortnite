@@ -18,12 +18,48 @@
   height: 100%;
 }
 
-/* Informação */
+/* Campeoes */
+
 .informacao {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 40px 10%;
+}
+
+#informacao {
+  flex-direction: row-reverse;
+}
+
+.informacao .texto {
+  width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.informacao .texto span {
+ font-weight: bold;
+}
+
+.informacao .texto h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.informacao .imagem-informacao img {
+  width: 550px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* FNCS */
+.informacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
 }
 
 .informacao .texto {
