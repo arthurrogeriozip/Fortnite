@@ -52,6 +52,15 @@
         </div>
 
         <div class="dash">
+            <div class="caixas">
+    <h3>Questão mais fácil:</h3>
+    <p id="maisFacil"></p>
+</div>
+
+<div class="caixas">
+    <h3>Questão mais difícil:</h3>
+    <p id="maisDificil"></p>
+</div>
 
         </div>
     </div>
@@ -63,4 +72,15 @@
 
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    fetch("/quiz/estatisticas")
+  .then(res => res.json())
+  .then(data => {
+     document.getElementById("maisFacil").innerHTML =
+        `${data.facil.pergunta} (${data.facil.porcentagem_acertos.toFixed(1)}% acertos)`;
+
+     document.getElementById("maisDificil").innerHTML =
+        `${data.dificil.pergunta} (${data.dificil.porcentagem_acertos.toFixed(1)}% acertos)`;
+  });
+
 </script>

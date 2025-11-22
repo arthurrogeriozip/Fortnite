@@ -363,7 +363,28 @@
                 certas++
                 document.getElementById("spanCertas").innerHTML = certas
                 numeroDaQuestaoAtual++
+
+                fetch("/quiz/registrarResposta", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        fkUsuario: sessionStorage.ID_USUARIO,
+                        fkQuestao: numeroDaQuestaoAtual,
+                        acertou: option.value === respostaQuestaoAtual ? 1 : 0
+                    })
+                });
             } else if (option.checked && option.value !== respostaQuestaoAtual) {
+
+                fetch("/quiz/registrarResposta", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        fkUsuario: sessionStorage.ID_USUARIO,
+                        fkQuestao: numeroDaQuestaoAtual + 1,
+                        acertou: 0
+                    })
+                });
+
                 const wrongLabelId = option.labels[0].id
 
                 document.getElementById(wrongLabelId).classList.add("text-danger-with-bg")
