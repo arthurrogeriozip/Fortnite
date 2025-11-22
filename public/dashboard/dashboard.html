@@ -254,7 +254,21 @@
         document.getElementById('jogo').style.display = "none"
     }
 
-    function iniciarQuiz() {
+    var idJogadaAtual = 0;
+
+    async function iniciarQuiz() {
+        let resposta = await fetch("/jogada/iniciar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            idUsuario: sessionStorage.ID_USUARIO
+        })
+    });
+
+    let dados = await resposta.json();
+    idJogadaAtual = dados.idJogada;   // salva a jogada atual
+
+
         document.getElementById('pontuacao').style.display = "flex"
         document.getElementById('jogo').style.display = "flex"
         document.getElementById('btnIniciarQuiz').style.display = "none"
@@ -370,7 +384,8 @@
                     body: JSON.stringify({
                         fkUsuario: sessionStorage.ID_USUARIO,
                         fkQuestao: numeroDaQuestaoAtual,
-                        acertou: option.value === respostaQuestaoAtual ? 1 : 0
+                        acertou: option.value === respostaQuestaoAtual ? 1 : 0,
+                        fkJogada: idJogadaAtual
                     })
                 });
             } else if (option.checked && option.value !== respostaQuestaoAtual) {
@@ -381,7 +396,8 @@
                     body: JSON.stringify({
                         fkUsuario: sessionStorage.ID_USUARIO,
                         fkQuestao: numeroDaQuestaoAtual + 1,
-                        acertou: 0
+                        acertou: 0,
+                        fkJogada: idJogadaAtual
                     })
                 });
 
