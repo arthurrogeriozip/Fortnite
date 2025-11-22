@@ -1,27 +1,46 @@
 const database = require("../database/config");
 
+function questaoMaisDificil() {
+    const instrucao = `
+        SELECT 
+            q.idQuestao,
+            q.pergunta,
+            SUM(r.acertou = 1) AS 'Acertos',
+            COUNT(*) AS 'Tentativas'
+        FROM questao q
+        JOIN resultado r ON r.fkQuestao = q.idQuestao
+        GROUP BY q.idQuestao, q.pergunta
+        ORDER BY Acertos
+        LIMIT 1;
+    `;
+    return database.executar(instrucao);
+}
+
+function questaoMaisFacil() {
+    const instrucao = `
+        SELECT 
+            q.idQuestao,
+            q.pergunta,
+            SUM(r.acertou = 1) AS 'Acertos',
+            COUNT(*) AS 'Tentativas'
+        FROM questao q
+        JOIN resultado r ON r.fkQuestao = q.idQuestao
+        GROUP BY q.idQuestao, q.pergunta
+        ORDER BY Acertos DESC
+        LIMIT 1;
+    `;
+    return database.executar(instrucao);
+}
+
 module.exports = {
+    questaoMaisDificil,
+    questaoMaisFacil,
 
-    registrarResposta: (fkUsuario, fkQuestao, acertou) => {
+
+    registrarResposta: (fkUsuario, fkQuestao, acertou, fkJogada) => {
         const instrucao = `
-            INSERT INTO resultado (fkUsuario, fkQuestao, acertou)
-            VALUES (${fkUsuario}, ${fkQuestao}, ${acertou});
-        `;
-
-        return database.executar(instrucao);
-    },
-
-    estatisticas: () => {
-        const instrucao = `
-            SELECT 
-                q.idQuestao,
-                q.pergunta,
-                COUNT(r.acertou) AS total_respostas,
-                SUM(r.acertou) AS total_acertos,
-                (SUM(r.acertou) / COUNT(r.acertou)) * 100 AS porcentagem_acertos
-            FROM questao q
-            JOIN resultado r ON q.idQuestao = r.fkQuestao
-            GROUP BY q.idQuestao;
+            INSERT INTO resultado (fkUsuario, fkQuestao, acertou, fkJogada)
+            VALUES (${fkUsuario}, ${fkQuestao}, ${acertou}, ${fkJogada});
         `;
 
         return database.executar(instrucao);

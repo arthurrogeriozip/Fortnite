@@ -73,14 +73,55 @@
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    fetch("/quiz/estatisticas")
-  .then(res => res.json())
-  .then(data => {
-     document.getElementById("maisFacil").innerHTML =
-        `${data.facil.pergunta} (${data.facil.porcentagem_acertos.toFixed(1)}% acertos)`;
+    document.addEventListener("DOMContentLoaded", () => {
 
-     document.getElementById("maisDificil").innerHTML =
-        `${data.dificil.pergunta} (${data.dificil.porcentagem_acertos.toFixed(1)}% acertos)`;
-  });
+    // Buscar questão mais difícil
+    fetch("/quiz/maisDificil")
+        .then(response => response.json())
+        .then(data => {
+
+            const questao = data[0];
+
+            console.log("Questão mais difícil:", questao);
+            console.log("Pergunta:", questao.pergunta);
+            console.log("Acertos:", questao.Acertos);
+            console.log("Tentativas:", questao.Tentativas);
+
+            // Exemplo: exibir no HTML
+            document.getElementById("perguntaDificil").innerText = questao.pergunta;
+            document.getElementById("acertosDificil").innerText = questao.Acertos;
+            document.getElementById("tentativasDificil").innerText = questao.Tentativas;
+
+        })
+        .catch(error => {
+            console.error("Erro ao buscar questão mais difícil:", error);
+        });
+
+
+        // Buscar questão mais fácil
+    fetch("/quiz/maisFacil")
+        .then(response => response.json())
+        .then(data => {
+
+            const questao = data[0];
+
+            console.log("Questão mais fácil:", questao);
+            console.log("Pergunta:", questao.pergunta);
+            console.log("Acertos:", questao.Acertos);
+            console.log("Tentativas:", questao.Tentativas);
+
+            // Exemplo: exibir no HTML
+            document.getElementById("perguntaFacil").innerText = questao.pergunta;
+            document.getElementById("acertosFacil").innerText = questao.Acertos;
+            document.getElementById("tentativasFacil").innerText = questao.Tentativas;
+
+        })
+        .catch(error => {
+            console.error("Erro ao buscar questão mais fácil:", error);
+        });
+
+});
+
+    
 
 </script>

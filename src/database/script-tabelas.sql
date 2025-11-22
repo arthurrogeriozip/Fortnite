@@ -15,13 +15,22 @@ CREATE TABLE questao (
     alternativaCorreta CHAR(1)
 );
 
+CREATE TABLE jogada (
+    idJogada INT PRIMARY KEY AUTO_INCREMENT,
+    fkUsuario INT,
+    FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario)
+);
+
+
 CREATE TABLE resultado (
     idResultado INT PRIMARY KEY AUTO_INCREMENT,
     fkUsuario INT,
     fkQuestao INT,
+    fkJogada INT,
     acertou TINYINT(1),
     CONSTRAINT fkUsuario FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario),
-    CONSTRAINT fkQuestao FOREIGN KEY (fkQuestao) REFERENCES questao(idQuestao)
+    CONSTRAINT fkQuestao FOREIGN KEY (fkQuestao) REFERENCES questao(idQuestao),
+    CONSTRAINT fkJogada FOREIGN KEY (fkJogada) REFERENCES jogada(idJogada)
 );
 
 INSERT INTO questao (pergunta, alternativaCorreta)VALUES
