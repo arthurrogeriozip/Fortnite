@@ -29,6 +29,8 @@
   cursor: pointer;
 }
 
+/* Conteudo */
+
 .containercont {
   display: flex;
   flex-direction: column;
@@ -37,9 +39,29 @@
   gap: 100px;
 }
 
-.lobby {
+/* Fortnite */
+
+.fortnite {
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: justify;
+  gap: 100px;
+  padding-top: 5%;
+}
+
+.fortnite img {
+  width: 600px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Lobby  */
+
+.lobby {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   font-size: 1.1rem;
   text-align: justify;
@@ -49,7 +71,24 @@
 .lobby img {
   width: 600px;
   height: auto;
+  border-radius: 10px;
 }
+
+/* Onibus */
+
+.battlebus {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.battlebus img {
+  width: 600px;
+  height: auto;
+}
+
+/* Mapa */
 
 .mapa {
   display: flex;
@@ -64,6 +103,8 @@
   width: 600px;
   height: auto;
 }
+
+/* Modos de Jogo  */
 
 .modos {
   display: flex;
@@ -98,25 +139,111 @@
   transform: scale(1.08);
 }
 
-.battlebus {
+/* Raridade */
+
+.raridade {
   display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  gap: 100px;
+}
+
+.raridade span{
+  margin-top: -100px;
+}
+
+.arsenal {
+  display: flex;
+  justify-content: space-around;
+}
+
+.arsenal img {
+  border-radius: 16px;
+  width: 200px;
+  height: auto;
+} 
+
+.arma {
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  width: 200px;
+}
+
+.arma img {
+  transition: 0.3s;
+}
+
+.arma img:hover {
+  transform: scale(1.08);
+}
+
+/* Construção  */
+
+.construcao {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  gap: 100px;
+}
+
+.construcao span{
+  margin-top: -100px;
+}
+
+.pagina {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pagina img {
+  border-radius: 16px;
+  width: 200px;
+  height: auto;
+} 
+
+.build {
+  display: flex;
+  flex-direction: column;
+  text-align:center;
+  width: 200px;
+}
+
+.build img {
+  transition: 0.3s;
+}
+
+.build img:hover {
+  transform: scale(1.08);
+}
+
+/* Emote */
+
+.emote {
+  display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   font-size: 1.1rem;
   text-align: justify;
+  gap: 100px;
 }
 
-.battlebus img {
+.emote img {
   width: 600px;
   height: auto;
 }
+
+
+/* Sobre mim */
 
 .sobremim {
   display: flex;
   align-items: center;
   font-size: 1.1rem;
   text-align: justify;
-  gap: 80px;
+  gap: 100px;
 }
+
 .sobremim img {
   width: 600px;
   height: auto;
