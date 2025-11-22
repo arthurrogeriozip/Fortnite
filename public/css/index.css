@@ -41,7 +41,7 @@
 
 /* Fortnite */
 
-.fortnite {
+.fortnitef {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -51,7 +51,7 @@
   padding-top: 5%;
 }
 
-.fortnite img {
+.fortnitef img {
   width: 600px;
   height: auto;
   border-radius: 10px;
