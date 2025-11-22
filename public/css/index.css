@@ -104,6 +104,24 @@
   height: auto;
 }
 
+/* Tempestade */
+
+.tempestade {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.1rem;
+  text-align: justify;
+  gap: 100px;
+}
+
+.tempestade img {
+  border-radius: 10px;
+  width: 600px;
+  height: auto;
+}
+
+
 /* Modos de Jogo  */
 
 .modos {
