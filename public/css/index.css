@@ -261,6 +261,8 @@
   font-size: 1.1rem;
   text-align: justify;
   gap: 100px;
+  padding-top: 6%;
+  padding-bottom: 8%;
 }
 
 .sobremim img {
