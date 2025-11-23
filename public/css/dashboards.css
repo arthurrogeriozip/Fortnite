@@ -412,8 +412,6 @@ canvas {
   cursor: pointer;
 }
 
-/* Arthur */
-
 img {
   width: 150px;
   height: auto;
@@ -423,3 +421,37 @@ img {
   width: 80px;
   height: auto;
 }
+
+/* Cards */
+
+.dashboard {
+  width: 80%;
+  position: relative;
+  top: 0;
+  left: 20%;
+  background-color: #161618;
+  height: 100vh;
+  overflow: auto;
+}
+
+.indicadores {
+display: flex;
+justify-content: space-evenly;
+padding-top: 3%;
+}
+
+.caixas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #343437;
+  border-radius: 6px;
+  color: white;
+  width: 500px;
+}
+
+.caixas span{
+  font-weight: bold;
+}
+
+

@@ -15,6 +15,8 @@
     <script src="../js/sessao.js"></script>
     <script src="./../js/alerta.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -51,16 +53,27 @@
 
         </div>
 
-        <div class="dash">
-            <div class="caixas">
-    <h3>Questão mais fácil:</h3>
-    <p id="maisFacil"></p>
-</div>
+        <div class="dashboard">
+            <div class="indicadores">
+                <div class="caixas">
+                <h3>Questão mais fácil:</h3>
+                <p id="perguntaFacil"></p>
+                <span>Acertos:</span><p id="acertosFacil"></p>
+                <span>Tentativas:</span><p id="tentativasFacil"></p>
+            </div>
 
-<div class="caixas">
-    <h3>Questão mais difícil:</h3>
-    <p id="maisDificil"></p>
-</div>
+            <div class="caixas">
+                <h3>Questão mais difícil:</h3>
+                <p id="perguntaDificil"></p>
+                <span>Acertos:</span><p id="acertosDificil"></p>
+                <span>Tentativas:</span><p id="tentativasDificil"></p>
+            </div>
+            </div>
+
+            <div class="grafico">
+        <h3>Gráfico – Questões</h3>
+    <canvas id="myChartCanvas"></canvas>
+        </div>
 
         </div>
     </div>
@@ -75,53 +88,53 @@
 
     document.addEventListener("DOMContentLoaded", () => {
 
-    // Buscar questão mais difícil
-    fetch("/quiz/maisDificil")
-        .then(response => response.json())
-        .then(data => {
+        // Buscar questão mais difícil
+        fetch("/quiz/maisDificil")
+            .then(response => response.json())
+            .then(data => {
 
-            const questao = data[0];
+                const questao = data[0];
 
-            console.log("Questão mais difícil:", questao);
-            console.log("Pergunta:", questao.pergunta);
-            console.log("Acertos:", questao.Acertos);
-            console.log("Tentativas:", questao.Tentativas);
+                console.log("Questão mais difícil:", questao);
+                console.log("Pergunta:", questao.pergunta);
+                console.log("Acertos:", questao.Acertos);
+                console.log("Tentativas:", questao.Tentativas);
 
-            // Exemplo: exibir no HTML
-            document.getElementById("perguntaDificil").innerText = questao.pergunta;
-            document.getElementById("acertosDificil").innerText = questao.Acertos;
-            document.getElementById("tentativasDificil").innerText = questao.Tentativas;
+                // Exemplo: exibir no HTML
+                document.getElementById("perguntaDificil").innerText = questao.pergunta;
+                document.getElementById("acertosDificil").innerText = questao.Acertos;
+                document.getElementById("tentativasDificil").innerText = questao.Tentativas;
 
-        })
-        .catch(error => {
-            console.error("Erro ao buscar questão mais difícil:", error);
-        });
+            })
+            .catch(error => {
+                console.error("Erro ao buscar questão mais difícil:", error);
+            });
 
 
         // Buscar questão mais fácil
-    fetch("/quiz/maisFacil")
-        .then(response => response.json())
-        .then(data => {
+        fetch("/quiz/maisFacil")
+            .then(response => response.json())
+            .then(data => {
 
-            const questao = data[0];
+                const questao = data[0];
 
-            console.log("Questão mais fácil:", questao);
-            console.log("Pergunta:", questao.pergunta);
-            console.log("Acertos:", questao.Acertos);
-            console.log("Tentativas:", questao.Tentativas);
+                console.log("Questão mais fácil:", questao);
+                console.log("Pergunta:", questao.pergunta);
+                console.log("Acertos:", questao.Acertos);
+                console.log("Tentativas:", questao.Tentativas);
 
-            // Exemplo: exibir no HTML
-            document.getElementById("perguntaFacil").innerText = questao.pergunta;
-            document.getElementById("acertosFacil").innerText = questao.Acertos;
-            document.getElementById("tentativasFacil").innerText = questao.Tentativas;
+                // Exemplo: exibir no HTML
+                document.getElementById("perguntaFacil").innerText = questao.pergunta;
+                document.getElementById("acertosFacil").innerText = questao.Acertos;
+                document.getElementById("tentativasFacil").innerText = questao.Tentativas;
 
-        })
-        .catch(error => {
-            console.error("Erro ao buscar questão mais fácil:", error);
-        });
+            })
+            .catch(error => {
+                console.error("Erro ao buscar questão mais fácil:", error);
+            });
 
-});
+    });
 
-    
+
 
 </script>
