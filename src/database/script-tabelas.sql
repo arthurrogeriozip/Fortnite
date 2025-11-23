@@ -21,13 +21,13 @@ CREATE TABLE jogada (
     FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario)
 );
 
-
 CREATE TABLE resultado (
-    idResultado INT PRIMARY KEY AUTO_INCREMENT,
+    idResultado INT AUTO_INCREMENT,
     fkUsuario INT,
     fkQuestao INT,
     fkJogada INT,
-    acertou TINYINT(1),
+    acertou TINYINT,
+    CONSTRAINT pkComposta PRIMARY KEY (idResultado,fkUsuario,fkQuestao,fkJogada),
     CONSTRAINT fkUsuario FOREIGN KEY (fkUsuario) REFERENCES usuario(idUsuario),
     CONSTRAINT fkQuestao FOREIGN KEY (fkQuestao) REFERENCES questao(idQuestao),
     CONSTRAINT fkJogada FOREIGN KEY (fkJogada) REFERENCES jogada(idJogada)
