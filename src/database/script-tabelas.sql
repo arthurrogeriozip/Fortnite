@@ -5,13 +5,13 @@ USE Fortnite;
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50) NOT NULL,
-	email VARCHAR(50) UNIQUE NOT NULL,
+	email VARCHAR(100) UNIQUE NOT NULL,
 	senha VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE questao (
     idQuestao INT PRIMARY KEY AUTO_INCREMENT,
-    pergunta TEXT,
+    pergunta VARCHAR(200),
     alternativaCorreta CHAR(1)
 );
 
