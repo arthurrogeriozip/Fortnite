@@ -432,6 +432,7 @@ img {
   background-color: #161618;
   height: 100vh;
   overflow: auto;
+  align-items: center;
 }
 
 .indicadores {
@@ -454,4 +455,18 @@ padding-top: 3%;
   font-weight: bold;
 }
 
+.centralizar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4%;
+}
 
+.grafico {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 900px;
+  align-items: center;
+  justify-content: space-between;
+}

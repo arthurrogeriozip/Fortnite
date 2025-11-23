@@ -56,25 +56,29 @@
         <div class="dashboard">
             <div class="indicadores">
                 <div class="caixas">
-                <h3>Questão mais fácil:</h3>
-                <p id="perguntaFacil"></p>
-                <span>Acertos:</span><p id="acertosFacil"></p>
-                <span>Tentativas:</span><p id="tentativasFacil"></p>
-            </div>
+                    <h3>Questão mais fácil:</h3>
+                    <p id="perguntaFacil"></p>
+                    <span>Acertos:</span>
+                    <p id="acertosFacil"></p>
+                    <span>Tentativas:</span>
+                    <p id="tentativasFacil"></p>
+                </div>
 
-            <div class="caixas">
-                <h3>Questão mais difícil:</h3>
-                <p id="perguntaDificil"></p>
-                <span>Acertos:</span><p id="acertosDificil"></p>
-                <span>Tentativas:</span><p id="tentativasDificil"></p>
+                <div class="caixas">
+                    <h3>Questão mais difícil:</h3>
+                    <p id="perguntaDificil"></p>
+                    <span>Acertos:</span>
+                    <p id="acertosDificil"></p>
+                    <span>Tentativas:</span>
+                    <p id="tentativasDificil"></p>
+                </div>
             </div>
+            <div class="centralizar">
+                <div class="grafico">
+                    <h3>Gráfico – Questões</h3>
+                    <canvas id="myChartCanvas"></canvas>
+                </div>
             </div>
-
-            <div class="grafico">
-        <h3>Gráfico – Questões</h3>
-    <canvas id="myChartCanvas"></canvas>
-        </div>
-
         </div>
     </div>
 
@@ -86,21 +90,16 @@
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
+    // Indicadores
     document.addEventListener("DOMContentLoaded", () => {
 
-        // Buscar questão mais difícil
+
         fetch("/quiz/maisDificil")
             .then(response => response.json())
             .then(data => {
 
                 const questao = data[0];
 
-                console.log("Questão mais difícil:", questao);
-                console.log("Pergunta:", questao.pergunta);
-                console.log("Acertos:", questao.Acertos);
-                console.log("Tentativas:", questao.Tentativas);
-
-                // Exemplo: exibir no HTML
                 document.getElementById("perguntaDificil").innerText = questao.pergunta;
                 document.getElementById("acertosDificil").innerText = questao.Acertos;
                 document.getElementById("tentativasDificil").innerText = questao.Tentativas;
@@ -111,19 +110,12 @@
             });
 
 
-        // Buscar questão mais fácil
         fetch("/quiz/maisFacil")
             .then(response => response.json())
             .then(data => {
 
                 const questao = data[0];
 
-                console.log("Questão mais fácil:", questao);
-                console.log("Pergunta:", questao.pergunta);
-                console.log("Acertos:", questao.Acertos);
-                console.log("Tentativas:", questao.Tentativas);
-
-                // Exemplo: exibir no HTML
                 document.getElementById("perguntaFacil").innerText = questao.pergunta;
                 document.getElementById("acertosFacil").innerText = questao.Acertos;
                 document.getElementById("tentativasFacil").innerText = questao.Tentativas;
@@ -135,6 +127,67 @@
 
     });
 
+    // Grafico
+    var grafico;
 
 
+    function obterGrafico() {
+        return fetch("/dashboard/listarAcertosErros")
+            .then(res => res.json())
+            .catch(err => {
+                console.error("Erro no obterGrafico():", err);
+            });
+    }
+
+    function plotarGrafico(dados) {
+
+
+        const labels = dados.map(q => "Questão " + q.idQuestao);
+        const valoresAcertos = dados.map(q => q.acertos);
+        const valoresErros = dados.map(q => q.erros);
+
+        const ctx = document.getElementById("myChartCanvas");
+
+        grafico = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: "Acertos",
+                        data: valoresAcertos,
+                        backgroundColor: "rgba(33, 148, 242)",
+                        borderWidth: 1
+                    },
+                    {
+                        label: "Erros",
+                        data: valoresErros,
+                        backgroundColor: "rgba(200, 0, 0)",
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 1 }
+                    }
+                }
+            }
+        });
+    }
+
+    function atualizarGrafico() {
+        obterGrafico().then(dados => {
+            if (!dados || !Array.isArray(dados)) {
+                console.error("Dados inválidos recebidos:", dados);
+                return;
+            }
+            plotarGrafico(dados);
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", atualizarGrafico);
 </script>
