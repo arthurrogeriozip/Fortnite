@@ -431,3 +431,10 @@ padding-top: 3%;
   align-items: center;
   justify-content: space-between;
 }
+
+#pergunta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
