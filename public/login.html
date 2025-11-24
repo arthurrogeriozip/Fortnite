@@ -46,11 +46,6 @@
     <img src="assets/imagens/jonesy.png" alt="Jonesy">
   </div>
   <div class="login">
-    <div class="alerta_erro">
-      <div class="card_erro" id="cardErro">
-        <span id="mensagem_erro"></span>
-      </div>
-    </div>
     <div class="container">
       <div class="card card-login">
         <div class="card imagem">
@@ -65,6 +60,9 @@
             <input id="senha_input" type="password" placeholder="Senha">
           </div>
           <button class="botao" onclick="entrar()">Continuar</button>
+          <div class="erro">
+            <span id="mensagem_erro"></span>
+          </div>
           <hr>
           <div class="contas">
             <a>
@@ -95,7 +93,7 @@
           <img src="./assets/bolinha.webp" id="loading-gif">
         </div>
 
-        <div id="div_erros_login"></div>
+        <div id=""></div>
       </div>
     </div>
   </div>
@@ -187,7 +185,6 @@
     var senhaVar = senha_input.value;
 
     if (emailVar == "" || senhaVar == "") {
-      cardErro.style.display = "block"
       mensagem_erro.innerHTML = "Há campos em branco preencha corretamente!";
       finalizarAguardar();
       return false;
@@ -245,7 +242,7 @@
   }
 
   function sumirMensagem() {
-    cardErro.style.display = "none"
+    mensagem_erro.style.display = "none"
   }
 
 </script>

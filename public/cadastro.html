@@ -73,7 +73,10 @@
             <input type="checkbox"> <span>Eu li e concordo com os <a>termos de serviço</a></span>
           </div>
           <button class="botao" onclick="cadastrar()">Cadastrar</button>
-          <span id="mensagem_erro"></span>
+          <div class="erro">
+            <span id="mensagem_erro"></span>
+          </div>
+          
           <div class="politica">
             <a>Política de Privacidade</a>
           </div>
@@ -82,7 +85,7 @@
           <img src="assets/imagens/peixoto.png" alt="Peixoto">
         </div>
         <div id="div_aguardar" class="loading-div">
-          <img src="./assets/circle-loading.gif" id="loading-gif" />
+          <img src="./assets/bolinha.webp" id="loading-gif" />
         </div>
     </div>
   </div>
@@ -182,7 +185,7 @@
       confirmacaoSenhaVar == ""
     ) {
       mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+        "Preencha todos os campos corretamente";
 
       finalizarAguardar();
       return false;
